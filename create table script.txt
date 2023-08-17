@@ -1,0 +1,11 @@
+CREATE TABLE veritydata (
+    id nvarchar(max) NOT NULL PRIMARY KEY,
+    veritynotes nvarchar(50),
+    verityguid nvarchar(50),
+    verityinstallstatus nvarchar(50),
+	date nvarchar(50),
+	projectnumber nvarchar(50),
+	modelname nvarchar(50),
+	buildingname nvarchar(50),
+	navisguid nvarchar(50)
+);

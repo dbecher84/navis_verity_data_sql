@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
 
 namespace verity_to_sql
 {
@@ -31,19 +32,20 @@ namespace verity_to_sql
                         while (reader.Read())
                         {
                             Table_list.Add((string)reader["TABLE_NAME"]);
+                            //MessageBox.Show((string)reader["TABLE_NAME"], "Table");
                         }
                     }
                 }
                 conn.Close();
                 foreach (string sTable in Table_list)
                 {
-                    if (sTable.ToLower() == "veritydata")
+                    if (Table_list.Contains(sTable.ToLower()))// == "veritydata")
                     {
                         return "Success";
                     }
                     else
                     {
-                        MessageBox.Show("Error connecting to datbase. Check network/VPN Connection.", "Error");
+                        MessageBox.Show("Error connecting to datbase. Check network/VPN Connection. Table found " + sTable, "Error");
                         return "Fail";
                     }
                 }

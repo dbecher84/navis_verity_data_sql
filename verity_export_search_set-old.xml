@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<exchange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://download.autodesk.com/us/navisworks/schemas/nw-exchange-12.0.xsd" units="ft" filename="20617_AMG_MFG_Installation Tracking_EAS_DUCT L1.nwd" filepath="C:\Users\dbecher\Desktop">
+  <selectionsets>
+    <selectionset name="verity_export" guid="bf30a7ed-27a5-4ee5-af4f-befc2c25a264">
+      <findspec mode="all" disjoint="0">
+        <conditions>
+          <condition test="prop" flags="10">
+            <property>
+              <name internal="LcOaNodeGuid">GUID</name>
+            </property>
+            <value>
+              <data type="wstring"></data>
+            </value>
+          </condition>
+          <condition test="prop" flags="10">
+            <category>
+              <name internal="LcOaPropOverrideCat">Verity</name>
+            </category>
+            <property>
+              <name internal="VerityGuid">Guid</name>
+            </property>
+            <value>
+              <data type="wstring"></data>
+            </value>
+          </condition>
+        </conditions>
+        <locator>/</locator>
+      </findspec>
+    </selectionset>
+  </selectionsets>
+</exchange>
